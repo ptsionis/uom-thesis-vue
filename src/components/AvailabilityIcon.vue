@@ -1,0 +1,39 @@
+<template>
+  <div :class="`availability-icon ${props.availability}`" :title="props.availability"></div>
+</template>
+
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  availability: {
+    type: String,
+    required: true
+  }
+});
+</script>
+
+<style scoped>
+.availability-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.ONLINE {
+  background: linear-gradient(to bottom right, #086d08, #0db40d, #0bec0b);
+}
+
+.OFFLINE {
+  background: linear-gradient(to bottom right, #3f413f, #4f524f, #686968);
+}
+
+.PLAYING {
+  background: linear-gradient(to bottom right, #d31709, #e71607, #f31202);
+}
+
+.PENDING {
+  background: linear-gradient(to bottom right, #cfac0f, #e2ba09, #f3c704);
+}
+</style>
