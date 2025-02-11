@@ -256,6 +256,7 @@ const updateQuestion = () => {
 
 .question-item-radio-group {
   display: flex;
+  justify-content: center;
 }
 
 .question-item-radio-option {
